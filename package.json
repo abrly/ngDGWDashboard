@@ -22,6 +22,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@types/highcharts": "^7.0.0",
     "angular-highcharts": "^17.0.1",
+    "chart.js": "^4.4.3",
+    "highcharts": "^11.4.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

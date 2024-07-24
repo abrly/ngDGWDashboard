@@ -1,0 +1,49 @@
+<div class="widget-container">
+    <div class="widget green">
+      <div class="icon">
+        <fa-icon [icon]="faCalendarCheck"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalAppointments }}</div>
+        <div class="bottom">إجمالي التعيينات</div>
+      </div>
+    </div>
+    <div class="widget yellow">
+      <div class="icon">
+        <fa-icon [icon]="faShop"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalAppointmentsWeb  }}</div>
+        <div class="bottom"> المواعيد عن طريق مركز الاتصال </div>
+      </div>
+    </div>
+    <div class="widget red">
+      <div class="icon">
+        <fa-icon [icon]="faMobile"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalAppointmentsMobile }}</div>
+        <div class="bottom">المواعيد عبر تطبيقات الجوال </div>
+      </div>
+    </div>
+    <div class="widget blue">
+      <div class="icon">
+        <fa-icon [icon]="faSatelliteDish"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalAppointmentsPM }}</div>
+        <div class="bottom">للصيانة الوقائية</div>
+      </div>
+    </div>
+    <div class="widget green">
+        <div class="icon">
+          <fa-icon [icon]="faWalkieTalkie"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{ TotalAppointmentsRepair }}</div>
+          <div class="bottom">للإصلاحات</div>
+        </div>
+      </div>     
+  </div>
+  
+

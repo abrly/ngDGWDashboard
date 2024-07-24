@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { interval, Observable, of, Subscription } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
+import { AppserviceService } from '../appservice.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +11,25 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
+  constructor(private appService:AppserviceService){}
+
+  subMenu!: Subscription;
+  
+  activeMenuDesc!:string;
+
+  ngOnInit(): void {
+   
+  this.subMenu = this.appService.activeMenu.subscribe((m) => {
+
+    this.activeMenuDesc= m.toString();
+
+   });
+
+
+ }
+  
+ 
 
 }
