@@ -1,8 +1,9 @@
 .main-container {
     display: flex;
+    width: 99%;
     .side-nav {
-      width: 350px;
-      min-width: 230px;
+      width: 80px;
+      min-width: 80px;
       min-height: calc(100vh - 70px);
       background-color: #113c60;
       color: #fff;
@@ -16,4 +17,5 @@
       padding: 30px;
     }
   }
-  
+
+ 

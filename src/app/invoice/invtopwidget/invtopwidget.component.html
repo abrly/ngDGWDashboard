@@ -1,0 +1,40 @@
+<div class="widget-container">
+    <div class="widget green">
+      <div class="icon">
+        <fa-icon [icon]="faLocation"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalTransCount  }}</div>
+        <div class="bottom">إجمالي المعاملات</div>
+      </div>
+    </div>
+    <div class="widget yellow">
+      <div class="icon">
+        <fa-icon [icon]="faShop"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalTranTypes }}</div>
+        <div class="bottom"> مجموع المواضيع </div>
+      </div>
+    </div>
+    <div class="widget red">
+      <div class="icon">
+        <fa-icon [icon]="faMoneyBillWave"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalInvoiceValue?.toFixed(2)  }}</div>
+        <div class="bottom"> إجمالي قيمة الفاتورة بالدرهم </div>
+      </div>
+    </div>
+    <div class="widget blue">
+      <div class="icon">
+        <fa-icon [icon]="faUsers"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalUsers }}</div>
+        <div class="bottom">إجمالي المستخدمين</div>
+      </div>
+    </div>
+  </div>
+  
+

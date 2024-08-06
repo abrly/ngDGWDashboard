@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './jobtopwidget.component.html',
   styleUrl: './jobtopwidget.component.css'
 })
-export class JobtopwidgetComponent {
+export class JobtopwidgetComponent implements OnInit,OnDestroy {
 
   constructor(private jobInOutService: JobInOutService) { }
 

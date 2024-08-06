@@ -13,7 +13,10 @@ import {
   faContactBook,
   faHand,
   faCalendarCheck,
-  faCarBurst
+  faCarBurst,
+  faMoneyBillWave,
+  faFileText,
+  faCodePullRequest 
 } from '@fortawesome/free-solid-svg-icons'; 
 
 
@@ -38,26 +41,39 @@ export class SideNavComponent {
   faHand = faHand;
   faCalendarCheck=faCalendarCheck;
   faCarBurst=faCarBurst;
+  faMoneyBillWave=faMoneyBillWave;
+  faFileText=faFileText;
+  faCodePullRequest =faCodePullRequest;
 
 
   onReceptionClick(){
-    this.appService.setActiveMenu("استقبال");
+    this.appService.setActiveMenu("قسم التسجيل والترخيص");
     this.router.navigate(['/reception']);
   }
 
   onInsuranceClick(){
-    this.appService.setActiveMenu("تأمين");
+    this.appService.setActiveMenu("قسم التأمين");
     this.router.navigate(['/insurance']);
   }
 
   onJobInOutClick(){
-    this.appService.setActiveMenu("ملخص الوظائف");
+    this.appService.setActiveMenu("قسم الاستقبال – فتح أوامر الصيانة");
     this.router.navigate(['/jobinout']);
   }
 
   onAppoitmentClick(){
-    this.appService.setActiveMenu("تعيينات");
+    this.appService.setActiveMenu("مركز الاتصال – حجر مواعيد الصيانة");
     this.router.navigate(['/appointment']);
+  }
+
+  onInvoiceClick(){
+    this.appService.setActiveMenu("ملخص الفاتورة");
+    this.router.navigate(['/invoice']);
+  }
+
+  onFleetReqClick(){
+    this.appService.setActiveMenu("ملخص طلبات الأسطول");
+    this.router.navigate(['/fleetreq']);
   }
 
 }

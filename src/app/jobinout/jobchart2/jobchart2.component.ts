@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { JobInOutService } from '../jobinout.service';
 import { UserPerformance } from '../models/userperformance.model';
@@ -13,7 +13,7 @@ import { SummaryTotals } from '../models/summarytotals.model';
   templateUrl: './jobchart2.component.html',
   styleUrl: './jobchart2.component.css'
 })
-export class Jobchart2Component {
+export class Jobchart2Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
 
@@ -80,6 +80,17 @@ export class Jobchart2Component {
     ],
     credits: {
       enabled: false
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <br>{point.percentage:.1f} %<br>value: {point.y}'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>value: {point.y}',
+        }
+      }
     }
   };
 
@@ -109,33 +120,33 @@ export class Jobchart2Component {
       });
 
       let jobsIn={
-        name:"وظائف في",
+        name:"فتح أوامر الصيانة - موقع (1)",
         y:this.totalJobCardsIn       
       };
 
       this.myChartData.push(jobsIn);
 
-      this.myChartcategories.push("وظائف في");
+      this.myChartcategories.push("فتح أوامر الصيانة - موقع (1)");
 
          let jobsCmmi={
-        name:"وظائف تجارية في",
+        name:"فتح أوامر الصيانة خارجية (8)",
         y:this.totalJobCardsCommercialsIn,
        
       };
 
       this.myChartData.push(jobsCmmi);
 
-      this.myChartcategories.push("وظائف تجارية في");
+      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8)");
 
     
       let jobsHhpoin={
-        name:"وظائف HHPO في",
+        name:"فتح أوامر صيانة المكتب الخاص (6)",
         y:this.totalJobCardsHHPOIn      
       };
 
       this.myChartData.push(jobsHhpoin);
 
-      this.myChartcategories.push("وظائف HHPO في");
+      this.myChartcategories.push("فتح أوامر صيانة المكتب الخاص (6)");
 
    
 
@@ -144,31 +155,31 @@ export class Jobchart2Component {
     
 
       let jobsOut={
-        name:"وظائف خارج",
+        name:"انهاء أوامر الصيانة رقم (1)",
         y:this.totalJobCardsOut       
       };
 
       this.myChartData.push(jobsOut);
 
-      this.myChartcategories.push("وظائف خارج");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (1)");
 
       let jobsCmmO={
-        name:"وظائف تجارية خارج",
+        name:"انهاء أوامر الصيانة رقم (8)",
         y:this.totalJobCardsCommercialsOut       
       };
 
       this.myChartData.push(jobsCmmO);
 
-      this.myChartcategories.push("وظائف تجارية خارج");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8)");
 
       let jobsHhpoOut={
-        name:"وظائف HHPO خارج",
+        name:"انهاء أوامر صيانة المكتب الخاص (6)",
         y:this.totalJobCardsHHPOOut        
       };
 
       this.myChartData.push(jobsHhpoOut);
 
-      this.myChartcategories.push("وظائف HHPO خارج");
+      this.myChartcategories.push("انهاء أوامر صيانة المكتب الخاص (6)");
 
     
       //---------------------------------

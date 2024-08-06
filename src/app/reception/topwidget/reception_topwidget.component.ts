@@ -13,6 +13,7 @@ import { ReceptionService } from '../reception.service';
 import { Subscription, switchMap, timer } from 'rxjs';
 import { SummaryTotals } from '../models/summarytotals.model';
 import { CommonModule } from '@angular/common';
+import { AppserviceService } from '../../appservice.service';
 
 
 @Component({
@@ -24,7 +25,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ReceptionTopwidgetComponent implements OnInit, OnDestroy {
 
-  constructor(private receptionService: ReceptionService) { }
+  constructor(private receptionService: ReceptionService,private appService:AppserviceService) { }
 
   faCar  =faCar;
   faUsers = faUsers;
@@ -44,6 +45,7 @@ export class ReceptionTopwidgetComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    this.appService.setActiveMenu("قسم التسجيل والترخيص");
 
 
     this.receptionSub = timer(0, 80000).pipe(

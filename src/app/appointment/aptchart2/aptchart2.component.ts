@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { AppointmentService } from '../appointment.service';
 import { UserPerformance } from '../models/userperformance.model';
@@ -13,7 +13,7 @@ import { SummaryTotals } from '../models/summarytotals.model';
   templateUrl: './aptchart2.component.html',
   styleUrl: './aptchart2.component.css'
 })
-export class Aptchart2Component {
+export class Aptchart2Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   constructor(private aptService: AppointmentService,private highcharts: HighchartsService) { }
@@ -71,6 +71,17 @@ export class Aptchart2Component {
     ],
     credits: {
       enabled: false
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <br>{point.percentage:.1f} %<br>value: {point.y}'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>value: {point.y}',
+        }
+      }
     }
   };
 

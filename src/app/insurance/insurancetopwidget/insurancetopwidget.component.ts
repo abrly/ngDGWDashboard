@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './insurancetopwidget.component.html',
   styleUrl: './insurancetopwidget.component.css'
 })
-export class InsurancetopwidgetComponent {
+export class InsurancetopwidgetComponent implements OnInit,OnDestroy {
 
   constructor(private insuranceService: InsuranceService) { }
 

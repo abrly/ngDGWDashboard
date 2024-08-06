@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './apttopwidget.component.html',
   styleUrl: './apttopwidget.component.css'
 })
-export class ApttopwidgetComponent {
+export class ApttopwidgetComponent implements OnInit,OnDestroy {
 
   constructor(private aptService: AppointmentService) { }
 

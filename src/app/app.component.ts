@@ -7,14 +7,15 @@ import { MainComponent } from './main/main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ChartModule } from 'angular-highcharts';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [FontAwesomeModule,HeaderComponent,SideNavComponent,MainComponent,RouterOutlet, OrderComponent, ChartModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'  
+  styleUrl: './app.component.css' 
 })
+
 export class AppComponent {
   title = 'ngDGWDashboard';
+
 }

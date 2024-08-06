@@ -1,20 +1,28 @@
-<div class="nav-items">
+<div class="nav-items" >
     <div class="nav-item" (click)="onReceptionClick()">      
-      <fa-icon [icon]="faDashboard"></fa-icon> &nbsp;
-      <span>استقبال</span>
+      <fa-icon title="قسم التسجيل والترخيص"  [icon]="faDashboard"></fa-icon> &nbsp;
+     <!-- <span style="font-family: dubai;font-weight: bold;">قسم التسجيل والترخيص</span> -->
     </div>
     <div class="nav-item" (click)="onInsuranceClick()">
-      <fa-icon [icon]="faCarBurst"></fa-icon> &nbsp;
-      <span>تأمين</span>
+      <fa-icon title="قسم التأمين" [icon]="faCarBurst"></fa-icon> &nbsp;
+    <!-- <span style="font-family: dubai;font-weight: bold;">قسم التأمين</span> -->
     </div>
     <div class="nav-item" (click)="onJobInOutClick()">
-      <fa-icon [icon]="faShop"></fa-icon> &nbsp;
-      <span>ملخص الوظائف </span>
+      <fa-icon title="قسم الاستقبال – فتح أوامر الصيانة" [icon]="faShop"></fa-icon> &nbsp;
+    <!--  <span style="font-family: dubai;font-weight: bold;">قسم الاستقبال – فتح أوامر الصيانة</span> -->
     </div>
     <div class="nav-item" (click)="onAppoitmentClick()">
-      <fa-icon [icon]="faCalendarCheck"></fa-icon> &nbsp;
-      <span>تعيينات</span>
-    </div>      
+      <fa-icon title="مركز الاتصال – حجر مواعيد الصيانة" [icon]="faCalendarCheck"></fa-icon> &nbsp;
+     <!-- <span style="font-family: dubai;font-weight: bold;">مركز الاتصال – حجر مواعيد الصيانة</span> -->
+    </div>     
+    
+    <div class="nav-item" (click)="onInvoiceClick()">
+      <fa-icon title="ملخص الفاتورة" [icon]="faFileText"></fa-icon> &nbsp;
+     <!-- <span style="font-family: dubai;font-weight: bold;">ملخص الفاتورة</span> -->
+    </div>     
+    <div class="nav-item" (click)="onFleetReqClick()">
+      <fa-icon title="طلبات الأسطول" [icon]="faCodePullRequest"></fa-icon> &nbsp;    
+    </div>           
    
   </div>
   

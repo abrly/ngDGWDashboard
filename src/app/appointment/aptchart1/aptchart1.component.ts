@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild ,OnDestroy} from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsService } from '../../utilityservices/highcharts.service';
 import { AppointmentService } from '../appointment.service';
@@ -13,7 +13,7 @@ import { UserPerformance } from '../models/userperformance.model';
   templateUrl: './aptchart1.component.html',
   styleUrl: './aptchart1.component.css'
 })
-export class Aptchart1Component {
+export class Aptchart1Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   
@@ -59,7 +59,7 @@ export class Aptchart1Component {
       showInLegend: true,
       data: this.myChartData,
       dataLabels: {
-        enabled: false,
+        enabled: true,
         rotation: 0,
         color: 'black',
         align: 'right',

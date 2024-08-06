@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { ReceptionService } from '../reception.service';
 import { UserPerformance } from '../models/userperformance.model';
@@ -12,7 +12,7 @@ import { HighchartsService } from '../../utilityservices/highcharts.service';
   templateUrl: './reception_chart2.component.html',
   styleUrl: './reception_chart2.component.css'
 })
-export class ReceptionChart2Component implements OnInit {
+export class ReceptionChart2Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   constructor(private receptionService: ReceptionService,private highcharts: HighchartsService) { }
@@ -70,6 +70,17 @@ export class ReceptionChart2Component implements OnInit {
     ],
     credits: {
       enabled: false
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <br>{point.percentage:.1f} %<br>value: {point.y}'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>value: {point.y}',
+        }
+      }
     }
   };
 

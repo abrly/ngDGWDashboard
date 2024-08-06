@@ -1,0 +1,41 @@
+<div class="widget-container">
+    <div class="widget green">
+      <div class="icon">
+        <fa-icon [icon]="faLocation"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalLinesCount  }}</div>
+        <div class="bottom">إجمالي خطوط الطلب</div>
+      </div>
+    </div>
+    <div class="widget yellow">
+      <div class="icon">
+        <fa-icon [icon]="faHandHolding"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalIssueLinesCount }}</div>
+        <div class="bottom"> إجمالي خطوط الطلب الصادرة</div>
+      </div>
+    </div>
+    <div class="widget red">
+      <div class="icon">
+        <fa-icon [icon]="faJedi"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalOrderedLinesCount  }}</div>
+        <div class="bottom"> إجمالي خطوط الطلب المطلوبة </div>
+      </div>
+    </div>
+    <div class="widget blue">
+      <div class="icon">
+        <fa-icon [icon]="faBarsProgress"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalPendingLinesCount }}</div>
+        <div class="bottom">إجمالي خطوط الطلب المعلقة</div>
+      </div>
+    </div>
+  </div>
+  
+
+

@@ -34,7 +34,7 @@
       margin: 10px;
       box-shadow: 5px 5px 5px #939393;
       &.left {
-        width: 890px;
+        width: 1260px;
         @media only screen and (max-width: 1600px) {
           width: 790px;
         }

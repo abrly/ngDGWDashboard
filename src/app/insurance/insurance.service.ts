@@ -31,6 +31,12 @@ export class InsuranceService {
           BackendURL + 'insurance/subjectwisetotals'));
   }
 
+  getActiveInsuranceTotals() {
+    return (this.http
+        .get<SubjectwiseTotals[]>(
+          BackendURL + 'insurance/activeinsurancetotals'));
+  }
+
   getSummaryTotals() {
     return (this.http
         .get<SummaryTotals[]>(

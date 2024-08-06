@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsService } from '../../utilityservices/highcharts.service';
 import { InsuranceService } from '../insurance.service';
@@ -12,7 +12,7 @@ import { SubjectwiseTotals } from '../models/subjectwisetotals.model';
   templateUrl: './insurance-chart1.component.html',
   styleUrl: './insurance-chart1.component.css'
 })
-export class InsuranceChart1Component {
+export class InsuranceChart1Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   
@@ -25,6 +25,8 @@ export class InsuranceChart1Component {
   myChartData : any[] = [];
 
   myChartcategories : any[] = [];
+
+ 
 
  
 
@@ -60,7 +62,7 @@ export class InsuranceChart1Component {
       showInLegend: true,
       data: this.myChartData,
       dataLabels: {
-        enabled: false,
+        enabled: true,
         rotation: 0,
         color: 'black',
         align: 'right',

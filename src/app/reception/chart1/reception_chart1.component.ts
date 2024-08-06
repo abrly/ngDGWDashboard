@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsService } from '../../utilityservices/highcharts.service';
 import { ReceptionService } from '../reception.service';
@@ -13,7 +13,7 @@ import { SubjectwiseTotals } from '../models/subjectwisetotals.model';
   templateUrl: './reception_chart1.component.html',
   styleUrl: './reception_chart1.component.css'
 })
-export class ReceptionChart1Component implements OnInit {
+export class ReceptionChart1Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   
@@ -61,7 +61,7 @@ export class ReceptionChart1Component implements OnInit {
       showInLegend: true,
       data: this.myChartData,
       dataLabels: {
-        enabled: false,
+        enabled: true,
         rotation: 0,
         color: 'black',
         align: 'right',

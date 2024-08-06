@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,OnDestroy } from '@angular/core';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsService } from '../../utilityservices/highcharts.service';
 import { Subscription, switchMap, timer } from 'rxjs';
@@ -13,7 +13,7 @@ import { SummaryTotals } from '../models/summarytotals.model';
   templateUrl: './jobchart1.component.html',
   styleUrl: './jobchart1.component.css'
 })
-export class Jobchart1Component {
+export class Jobchart1Component implements OnInit,OnDestroy {
 
   @ViewChild('charts') public chartEl!: ElementRef;
   
@@ -68,7 +68,7 @@ export class Jobchart1Component {
       showInLegend: true,
       data: this.myChartData,
       dataLabels: {
-        enabled: false,
+        enabled: true,
         rotation: 0,
         color: 'black',
         align: 'right',
@@ -130,14 +130,14 @@ export class Jobchart1Component {
 
 
       let jobsIn={
-        name:"وظائف في",
+        name:"فتح أوامر الصيانة - موقع (1)",
         y:this.totalJobCardsIn,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsIn);
 
-      this.myChartcategories.push("وظائف في");
+      this.myChartcategories.push("فتح أوامر الصيانة - موقع (1)");
 
       colors.splice(iColorIndex, 1);
 
@@ -145,28 +145,28 @@ export class Jobchart1Component {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsCmmi={
-        name:"وظائف تجارية في",
+        name:"فتح أوامر الصيانة خارجية (8)",
         y:this.totalJobCardsCommercialsIn,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsCmmi);
 
-      this.myChartcategories.push("وظائف تجارية في");
+      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8)");
 
       colors.splice(iColorIndex, 1);
 
 
       iColorIndex= Math.floor(Math.random() * colors.length);
       let jobsHhpoin={
-        name:"وظائف HHPO في",
+        name:"فتح أوامر صيانة المكتب الخاص (6)",
         y:this.totalJobCardsHHPOIn,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsHhpoin);
 
-      this.myChartcategories.push("وظائف HHPO في");
+      this.myChartcategories.push("فتح أوامر صيانة المكتب الخاص (6)");
 
       colors.splice(iColorIndex, 1);
 
@@ -175,14 +175,14 @@ export class Jobchart1Component {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsOut={
-        name:"وظائف خارج",
+        name:"انهاء أوامر الصيانة رقم (1)",
         y:this.totalJobCardsOut,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsOut);
 
-      this.myChartcategories.push("وظائف خارج");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (1)");
 
       colors.splice(iColorIndex, 1);
 
@@ -190,14 +190,14 @@ export class Jobchart1Component {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsCmmO={
-        name:"وظائف تجارية خارج",
+        name:"انهاء أوامر الصيانة رقم (8)",
         y:this.totalJobCardsCommercialsOut,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsCmmO);
 
-      this.myChartcategories.push("وظائف تجارية خارج");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8)");
 
       colors.splice(iColorIndex, 1);
 
@@ -205,14 +205,14 @@ export class Jobchart1Component {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsHhpoOut={
-        name:"وظائف HHPO خارج",
+        name:"انهاء أوامر صيانة المكتب الخاص (6)",
         y:this.totalJobCardsHHPOOut,
         color: colors[iColorIndex]
       };
 
       this.myChartData.push(jobsHhpoOut);
 
-      this.myChartcategories.push("وظائف HHPO خارج");
+      this.myChartcategories.push("انهاء أوامر صيانة المكتب الخاص (6)");
 
       colors.splice(iColorIndex, 1);
 
