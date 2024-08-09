@@ -48,7 +48,7 @@ export class InvtopwidgetComponent implements OnInit,OnDestroy {
 
 
 
-    this.invSub = timer(0, 80000).pipe(
+    this.invSub = timer(0, 900000).pipe(
 
       switchMap(x => this.invService.getSummaryTotals())
 

@@ -90,7 +90,7 @@ export class Aptchart2Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-    this.aptSub = timer(0, 30000).pipe(
+    this.aptSub = timer(0, 900000).pipe(
 
       switchMap(x => this.aptService.getSummaryTotals())
 

@@ -60,7 +60,7 @@ export class ApttopwidgetComponent implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.aptSub = timer(0, 80000).pipe(
+    this.aptSub = timer(0, 900000).pipe(
 
       switchMap(x => this.aptService.getSummaryTotals())
 

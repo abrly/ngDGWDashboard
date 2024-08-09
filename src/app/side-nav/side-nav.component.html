@@ -20,9 +20,16 @@
       <fa-icon title="ملخص الفاتورة" [icon]="faFileText"></fa-icon> &nbsp;
      <!-- <span style="font-family: dubai;font-weight: bold;">ملخص الفاتورة</span> -->
     </div>     
+    <div class="nav-item" (click)="onFineClick()">
+      <fa-icon title="الغرامات" [icon]="faMoneyCheck"></fa-icon> &nbsp;    
+    </div>     
     <div class="nav-item" (click)="onFleetReqClick()">
       <fa-icon title="طلبات الأسطول" [icon]="faCodePullRequest"></fa-icon> &nbsp;    
-    </div>           
+    </div>   
+    <div class="nav-item" (click)="onPOClick()">
+      <fa-icon title="طلبات الشراء" [icon]="faBucket"></fa-icon> &nbsp;    
+    </div>   
+         
    
   </div>
   

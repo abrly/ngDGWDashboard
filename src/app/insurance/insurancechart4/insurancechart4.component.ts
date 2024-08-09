@@ -87,7 +87,7 @@ export class Insurancechart4Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-    this.insuranceSub = timer(0, 30000).pipe(
+    this.insuranceSub = timer(0, 900000).pipe(
 
       switchMap(x => this.insuranceService.getActiveInsuranceTotals())
 

@@ -91,7 +91,7 @@ export class Invchart1Component implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.invSub = timer(0, 30000).pipe(
+    this.invSub = timer(0, 900000).pipe(
 
       switchMap(x => this.invService.getTypewiseTotals())
 

@@ -93,7 +93,7 @@ export class Gpchart1Component implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.gpSub = timer(0, 30000).pipe(
+    this.gpSub = timer(0, 900000).pipe(
 
       switchMap(x => this.gpService.getSummaryTotals())
 

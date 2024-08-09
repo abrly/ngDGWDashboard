@@ -87,7 +87,7 @@ export class Gpchart2Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-    this.gpSub = timer(0, 30000).pipe(
+    this.gpSub = timer(0, 900000).pipe(
 
       switchMap(x => this.gpService.getUserPerformance())
 

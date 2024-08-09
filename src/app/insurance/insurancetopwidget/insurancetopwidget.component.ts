@@ -45,7 +45,7 @@ export class InsurancetopwidgetComponent implements OnInit,OnDestroy {
 
 
 
-    this.insuranceSub = timer(0, 80000).pipe(
+    this.insuranceSub = timer(0, 900000).pipe(
 
       switchMap(x => this.insuranceService.getSummaryTotals())
 

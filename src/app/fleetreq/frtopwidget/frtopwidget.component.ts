@@ -11,7 +11,8 @@ import {
   faMoneyBillWave,
   faBarsProgress,
   faJedi,
-  faHandHolding
+  faHandHolding,
+  faSection
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FleetReqService } from '../fleetreq.service';
@@ -41,6 +42,7 @@ export class FrtopwidgetComponent implements OnInit,OnDestroy {
   faBarsProgress=faBarsProgress;
   faJedi=faJedi;
   faHandHolding=faHandHolding;
+  faSection=faSection;
 
   private invSub!: Subscription;
 
@@ -55,7 +57,7 @@ export class FrtopwidgetComponent implements OnInit,OnDestroy {
 
 
 
-    this.invSub = timer(0, 80000).pipe(
+    this.invSub = timer(0, 900000).pipe(
 
       switchMap(x => this.frService.getSummaryTotals())
 

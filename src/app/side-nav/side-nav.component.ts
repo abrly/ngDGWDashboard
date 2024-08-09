@@ -16,7 +16,10 @@ import {
   faCarBurst,
   faMoneyBillWave,
   faFileText,
-  faCodePullRequest 
+  faCodePullRequest ,
+  faBucket,
+  faFilePen,
+  faMoneyCheck
 } from '@fortawesome/free-solid-svg-icons'; 
 
 
@@ -44,6 +47,10 @@ export class SideNavComponent {
   faMoneyBillWave=faMoneyBillWave;
   faFileText=faFileText;
   faCodePullRequest =faCodePullRequest;
+  faBucket=faBucket;
+  faFilePen=faFilePen;
+  faMoneyCheck=faMoneyCheck;
+  
 
 
   onReceptionClick(){
@@ -74,6 +81,16 @@ export class SideNavComponent {
   onFleetReqClick(){
     this.appService.setActiveMenu("ملخص طلبات الأسطول");
     this.router.navigate(['/fleetreq']);
+  }
+
+  onPOClick(){
+    this.appService.setActiveMenu("طلبات الشراء");
+    this.router.navigate(['/po']);
+  }
+
+  onFineClick(){
+    this.appService.setActiveMenu("الغرامات");
+    this.router.navigate(['/fine']);
   }
 
 }

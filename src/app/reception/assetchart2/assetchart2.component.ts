@@ -87,7 +87,7 @@ export class Assetchart2Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-    this.assetSub = timer(0, 30000).pipe(
+    this.assetSub = timer(0, 900000).pipe(
 
       switchMap(x => this.assetService.getTypewiseTotals())
 

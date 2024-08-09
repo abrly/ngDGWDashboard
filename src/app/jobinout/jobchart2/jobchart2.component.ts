@@ -96,7 +96,7 @@ export class Jobchart2Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-      this.jobsinoutSub = timer(0, 30000).pipe(
+      this.jobsinoutSub = timer(0, 900000).pipe(
 
         switchMap(x => this.jobinoutService.getSummaryTotals())
   
@@ -129,14 +129,14 @@ export class Jobchart2Component implements OnInit,OnDestroy {
       this.myChartcategories.push("فتح أوامر الصيانة - موقع (1)");
 
          let jobsCmmi={
-        name:"فتح أوامر الصيانة خارجية (8)",
+        name:"فتح أوامر الصيانة خارجية (8,15)",
         y:this.totalJobCardsCommercialsIn,
        
       };
 
       this.myChartData.push(jobsCmmi);
 
-      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8)");
+      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8,15)");
 
     
       let jobsHhpoin={
@@ -164,13 +164,13 @@ export class Jobchart2Component implements OnInit,OnDestroy {
       this.myChartcategories.push("انهاء أوامر الصيانة رقم (1)");
 
       let jobsCmmO={
-        name:"انهاء أوامر الصيانة رقم (8)",
+        name:"انهاء أوامر الصيانة رقم (8,15)",
         y:this.totalJobCardsCommercialsOut       
       };
 
       this.myChartData.push(jobsCmmO);
 
-      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8)");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8,15)");
 
       let jobsHhpoOut={
         name:"انهاء أوامر صيانة المكتب الخاص (6)",

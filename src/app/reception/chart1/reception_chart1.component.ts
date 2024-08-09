@@ -92,7 +92,7 @@ export class ReceptionChart1Component implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.receptionSub = timer(0, 30000).pipe(
+    this.receptionSub = timer(0, 900000).pipe(
 
       switchMap(x => this.receptionService.getSubjectwiseTotals())
 

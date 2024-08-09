@@ -99,7 +99,7 @@ export class Jobchart1Component implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.jobsinoutSub = timer(0, 30000).pipe(
+    this.jobsinoutSub = timer(0, 900000).pipe(
 
       switchMap(x => this.jobinoutService.getSummaryTotals())
 
@@ -145,7 +145,7 @@ export class Jobchart1Component implements OnInit,OnDestroy {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsCmmi={
-        name:"فتح أوامر الصيانة خارجية (8)",
+        name:"فتح أوامر الصيانة خارجية (8,15)",
         y:this.totalJobCardsCommercialsIn,
         color: colors[iColorIndex]
       };
@@ -190,7 +190,7 @@ export class Jobchart1Component implements OnInit,OnDestroy {
       iColorIndex= Math.floor(Math.random() * colors.length);
 
       let jobsCmmO={
-        name:"انهاء أوامر الصيانة رقم (8)",
+        name:"انهاء أوامر الصيانة رقم (8,15)",
         y:this.totalJobCardsCommercialsOut,
         color: colors[iColorIndex]
       };

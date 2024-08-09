@@ -87,7 +87,7 @@ export class Frchart2Component implements OnInit,OnDestroy {
 
     ngOnInit(): void {
 
-    this.frSub = timer(0, 30000).pipe(
+    this.frSub = timer(0, 900000).pipe(
 
       switchMap(x => this.frService.getStatusSummary())
 

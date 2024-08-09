@@ -1,0 +1,59 @@
+<div class="widget-container">
+    <div class="widget green">
+      <div class="icon">
+        <fa-icon [icon]="faLocation"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalTransCount  }}</div>
+        <div class="bottom">إجمالي المعاملات</div>
+      </div>
+    </div>
+    <div class="widget yellow">
+      <div class="icon">
+        <fa-icon [icon]="faShop"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalTranTypes }}</div>
+        <div class="bottom"> مجموع المواضيع </div>
+      </div>
+    </div>
+    <div class="widget red">
+        <div class="icon">
+          <fa-icon [icon]="faCar"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{ TotalEquipments  }}</div>
+          <div class="bottom"> إجمالي المعدات </div>
+        </div>
+      </div>
+    <div class="widget green">
+      <div class="icon">
+        <fa-icon [icon]="faMoneyBillWave"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalFineValue?.toFixed(2)  }}</div>
+        <div class="bottom"> إجمالي قيمة الغرامات بالدرهم </div>
+      </div>
+    </div>
+    <div class="widget yellow">
+      <div class="icon">
+        <fa-icon [icon]="faMoneyBillWave"></fa-icon>
+      </div>
+      <div class="value">
+        <div class="top">{{ TotalFinePaidValue?.toFixed(2) }}</div>
+        <div class="bottom">إجمالي الغرامات المدفوعة بالدرهم</div>
+      </div>
+    </div>
+    <div class="widget blue">
+        <div class="icon">
+          <fa-icon [icon]="faMoneyBillWave"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{ TotalFinePendingValue?.toFixed(2) }}</div>
+          <div class="bottom">إجمالي الغرامات المعلقة الدفع بالدرهم</div>
+        </div>
+      </div>
+  </div>
+  
+
+

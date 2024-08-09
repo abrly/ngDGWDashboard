@@ -50,7 +50,7 @@ export class JobtopwidgetComponent implements OnInit,OnDestroy {
 
 
 
-    this.receptionSub = timer(0, 80000).pipe(
+    this.receptionSub = timer(0, 900000).pipe(
 
       switchMap(x => this.jobInOutService.getSummaryTotals())
 
