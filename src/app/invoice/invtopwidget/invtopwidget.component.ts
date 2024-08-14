@@ -41,8 +41,10 @@ export class InvtopwidgetComponent implements OnInit,OnDestroy {
 
   public TotalTransCount!:number;
   public TotalTranTypes!:number;
-  public TotalInvoiceValue!:number;
+  public TotalInvoiceValue:number=0;
   public TotalUsers!:number;
+  public TotalOfflinePaymentsValue:number=0;
+  public TotalOnlinePaymentsValue:number=0;
 
   ngOnInit(): void {
 
@@ -62,6 +64,8 @@ export class InvtopwidgetComponent implements OnInit,OnDestroy {
         this.TotalTranTypes=e.TotalTranTypes;
         this.TotalInvoiceValue=e.TotalInvoiceValue;
         this.TotalUsers=e.TotalUsers;
+        this.TotalOfflinePaymentsValue=e.TotalOfflinePaymentsValue;
+        this.TotalOnlinePaymentsValue=e.TotalOnlinePaymentsValue;
         
       });
  

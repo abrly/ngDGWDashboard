@@ -52,6 +52,21 @@
       &.right {
         width: 450px;
       }
+      &.onewidget{
+        width: 1750px;
+        @media only screen and (max-width: 1600px) {
+          width: 1280px;
+        }
+        @media only screen and (max-width: 1500px) {
+          width: 690px;
+        }
+        @media only screen and (max-width: 1400px) {
+          width: 590px;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 490px;
+        }
+      }
     }
   }
   .bottom-section {

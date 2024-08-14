@@ -36,7 +36,7 @@ export class Gpchart1Component implements OnInit,OnDestroy {
       height: 325
     },
     title: {
-      text: 'ملخص المعاملات الموضوعية'
+      text: 'ملخص بوابة المرور'
     },
     xAxis: {
       categories: this.myChartcategories,

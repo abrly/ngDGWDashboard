@@ -53,7 +53,7 @@ export class PotopwidgetComponent implements OnInit,OnDestroy {
   public TotalPOTrans!:number;
   public TotalVendors!:number;
   public TotalParts!:number;
-  public TotalAmount!:number;
+  public TotalAmount:number=0;
 
   ngOnInit(): void {
 

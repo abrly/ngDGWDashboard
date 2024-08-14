@@ -3,6 +3,8 @@ export class SummaryTotals {
         public TotalTransCount: number,
         public TotalTranTypes: number,
         public TotalInvoiceValue: number,
-        public TotalUsers: number,            
+        public TotalUsers: number,  
+        public TotalOfflinePaymentsValue: number,
+        public TotalOnlinePaymentsValue : number,       
         ) { }
 }

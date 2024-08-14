@@ -152,7 +152,7 @@ export class Jobchart1Component implements OnInit,OnDestroy {
 
       this.myChartData.push(jobsCmmi);
 
-      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8)");
+      this.myChartcategories.push("فتح أوامر الصيانة خارجية (8,15)");
 
       colors.splice(iColorIndex, 1);
 
@@ -197,7 +197,7 @@ export class Jobchart1Component implements OnInit,OnDestroy {
 
       this.myChartData.push(jobsCmmO);
 
-      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8)");
+      this.myChartcategories.push("انهاء أوامر الصيانة رقم (8,15)");
 
       colors.splice(iColorIndex, 1);
 
